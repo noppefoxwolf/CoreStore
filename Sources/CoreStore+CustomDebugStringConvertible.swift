@@ -180,23 +180,23 @@ extension DataStack: CustomDebugStringConvertible, CoreStoreDebugStringConvertib
     // MARK: CustomDebugStringConvertible
     
     public var debugDescription: String {
-        
-        return formattedDebugDescription(self)
+        ""
+        // return formattedDebugDescription(self)
     }
     
     
     // MARK: CoreStoreDebugStringConvertible
     
     public var coreStoreDumpString: String {
-        
-        return createFormattedString(
-            "(", ")",
-            ("coordinator", self.coordinator),
-            ("rootSavingContext", self.rootSavingContext),
-            ("mainContext", self.mainContext),
-            ("schemaHistory", self.schemaHistory),
-            ("coordinator.persistentStores", self.coordinator.persistentStores)
-        )
+        ""
+        // return createFormattedString(
+        //     "(", ")",
+        //     ("coordinator", self.coordinator),
+        //     ("rootSavingContext", self.rootSavingContext),
+        //     ("mainContext", self.mainContext),
+        //     ("schemaHistory", self.schemaHistory),
+        //     ("coordinator.persistentStores", self.coordinator.persistentStores)
+        // )
     }
 }
 
