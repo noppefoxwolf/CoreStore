@@ -220,7 +220,11 @@ extension DiffableDataSource {
 
         public func reloadItems(at indexPaths: [IndexPath], animated: Bool) {
 
-            self.base?.reloadItems(at: indexPaths)
+            if #available(iOS 15.0, *) {
+                self.base?.reconfigureItems(at: indexPaths)
+            } else {
+                self.base?.reloadItems(at: indexPaths)
+            }
         }
 
         public func moveItem(at indexPath: IndexPath, to newIndexPath: IndexPath, animated: Bool) {
